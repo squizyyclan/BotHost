@@ -1,0 +1,29 @@
+# Dein Bot kommt in den Ordner:  plugins/BotHost/bot/
+# Lade dort alle Dateien deines Bots hoch (index.js, package.json, bot.py, requirements.txt, *.jar ...).
+
+# Ordnername (relativ zu plugins/BotHost/)
+bot-folder: bot
+
+# Bot beim Serverstart automatisch starten
+auto-start: true
+
+# Bot automatisch neu starten, wenn er abstürzt
+auto-restart: true
+restart-delay-seconds: 10
+# Nach so vielen Abstürzen hintereinander wird aufgegeben
+max-restarts: 5
+
+# Abhängigkeiten automatisch installieren (npm install / pip install)
+auto-install: true
+
+# Leer lassen = automatisch erkennen:
+#   package.json     -> "npm start" bzw. "node <main>"
+#   bot.py / main.py -> "python3 <datei>"
+#   *.jar            -> "java -jar <datei>"
+# Oder selbst festlegen, z.B.:  "node src/index.js"
+start-command: ""
+install-command: ""
+
+# Umgebungsvariablen für den Bot (z.B. dein Discord-Token)
+environment:
+  DISCORD_TOKEN: ""
