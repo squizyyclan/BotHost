@@ -1,0 +1,15 @@
+name: BotHost
+version: '${project.version}'
+main: de.bothost.BotHost
+api-version: '1.21'
+description: Startet und überwacht einen eigenen Bot (Discord o.ä.) direkt aus dem Plugin-Ordner
+commands:
+  bothost:
+    description: Steuert den gehosteten Bot
+    usage: /bothost <start|stop|restart|status|log>
+    permission: bothost.admin
+    aliases: [bh]
+permissions:
+  bothost.admin:
+    description: Erlaubt das Steuern des Bots
+    default: op
